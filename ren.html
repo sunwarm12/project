@@ -1,0 +1,97 @@
+<!-- 
+1、获取真实的dom节点
+	组件并不是真实的dom节点，只是存在于内存中的一种数据结构，叫做虚拟dom；当我们把组件插入到文档中后，才会成为真实的DOM节点，在react中，所有的dom变动，都会先在虚拟dom中发生，然后再将实际发生变动的部分反应到真实的dom中，这样可以提高网页性能；如果我们想要从react中获取真实的dom节点，需要用到组件的refs属性，并且需要在元素上添加ref属性
+	通过this.refs.ref属性值获取对应的dom真实节点
+
+2、this.state
+	该属性用于处理用户交互，组件中需要用到的数据，可以通过该属性进行获取和设置
+
+3、事件
+	onClick、onChange、onKeyDom、onKeyUp
+	与dom中类似，只是字母进行大写
+	事件绑定：
+	onClick={this.事件名}
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src ="react.js"></script>
+	<script src="react-dom.js"></script>
+	<script src="browser.min.js"></script>
+</head>
+<body>
+	<div id="d1"></div>
+	<script type="text/babel">
+		var Com = React.createClass({
+			
+			btnClick:function(){
+	
+				var input1 = this.refs.myText1.value;
+				var input2 = this.refs.myText2.value;
+				var name  = document.getElementById("name");
+				name.textContent = input1;
+			    age.textContent = input2;
+			},
+			render:function(){
+				return (
+					<div>
+						 姓名：<input type="text" ref="myText1"/><br/>
+						 年龄：<input type="text" ref="myText2"/>
+						<br/>
+						<input type="button" value="提交" onClick={this.btnClick} /><br/>
+						姓名：<div id="name"></div>
+						年龄:<div id="age"></div>
+					</div>
+				)
+			}
+		});
+		ReactDOM.render(
+			<Com />,
+			document.getElementById("d1")
+		)
+	</script>
+
+	<!-- <div id="d2"></div>
+	<script type="text/babel">
+		var Com1 = React.createClass({
+			//通过getInitialState函数初始化组件需要用到的变量
+			getInitialState:function(){
+				return {
+					text:'默认文本',
+					name:'无'
+				}
+			},
+			//定义事件触发函数
+			clickInfo:function(){
+				//改变变量text的值
+				this.setState({
+					text:"张三"
+				});
+			},
+			btnClick1:function(){
+				this.setState({
+					name:'赵六',
+					text:'王麻子'
+				})
+			},
+			render:function(){
+				//获取组件中的变量
+				var content = this.state.text;
+				var name1 = this.state.name
+				return (
+					<div>
+						<div onClick={this.clickInfo}>{content}-{name1}</div>
+						<input type="button" value="按钮" onClick={this.btnClick1}/>
+					</div>	
+				)
+			}
+		});
+		ReactDOM.render(
+			<Com1 />,
+			document.getElementById('d2')
+		)
+	</script> -->
+</body>
+</html>
