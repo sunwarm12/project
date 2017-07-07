@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<script src="jquery-3.1.1.min.js"></script>
+	<title></title>
+</head>
+<body>
+	<div id="jd_box">
+		<header>
+		<div id="header_box">
+		<a href="#"  id="icon_logo"></a>
+		<form>
+			<span id="box_picture"></span>
+			
+			<input type="text" placeholder="请输入商品名">                           
+			</form>
+			<a href="#" id="jd_login">登录</a>
+			</div>
+		</header>
+		<div id="jd_ad" class="swiper-container">
+			<ul id="ad_picture" class="swiper-wrapper">
+				<li class="swiper-slide"><a href="#"><img src="images/1.jpg" ></a></li>
+				<li class="swiper-slide"><a href="#"><img src="images/2.jpg" ></a></li>
+				<li class="swiper-slide"><a href="#"><img src="images/3.jpg"></a></li>
+				<li class="swiper-slide"><a href="#"><img src="images/4.jpg" ></a></li>
+				<li class="swiper-slide"><a href="#"><img src="images/5.jpg" ></a></li>
+				<li class="swiper-slide"><a href="#"><img src="images/6.jpg" ></a></li>
+				<li class="swiper-slide"><a href="#"><img src="images/7.jpg" ></a></li>
+				<li class="swiper-slide"><a href="#"><img src="images/8.jpg" ></a></li>
+			</ul>
+			<div class="swiper-pagination swiper-pagination-white"></div>
+		</div>
+		<nav id="jd_nav">
+			<div id="nav_top"> 
+				<div>
+					<img src="images/icon.jpg">
+					 <p>分类查询</p>
+				</div>
+				<div>
+					<img src="images/icon.jpg">
+					<p>分类查询</p>
+				</div>
+				<div>
+					<img src="images/icon.jpg">
+					<p>分类查询</p>
+				</div>
+				<div>
+					<img src="images/icon.jpg">
+					<p>分类查询</p>
+				</div>
+			    
+			 </div>
+			<div id="nav_bottom"> 
+				<div>
+					<img src="images/icon.jpg">
+					 <p>分类查询</p>
+				</div>
+				<div>
+					<img src="images/icon.jpg">
+					 <p>分类查询</p>
+				</div>
+				<div>
+					<img src="images/icon.jpg">
+					 <p>分类查询</p>
+				</div>
+				<div>
+					<img src="images/icon.jpg">
+					 <p>分类查询</p>
+			   </div>
+			 </div>
+		   </nav>
+		<main id="jd_context">
+			<section id="content_box">
+				<div class="jd_time time_border">
+					<div id="jd_clock">
+						<span><img src="images/clock.png"></span> 
+						<span id="time_word">掌上秒杀</span>
+						<div id="clock_time">
+							<span>0</span>
+							<span>0</span>
+							<span class="colon">:</span>
+							<span>0</span>
+							<span>0</span>
+							<span class="colon">:</span>
+							<span>0</span>
+							<span>0</span>
+						</div>
+					</div>
+					<div id="time_more">更多>></li></div>
+				</div>
+				<div id="jd_product">
+					<ul>
+						<li>
+							<a href=""><img src="images/p1.jpg" alt=""></a>
+							<p>&yen;10</p>
+						    <p>&yen;100</p>
+						</li>
+						<li>
+							<a href=""><img src="images/p1.jpg" alt=""></a>
+							<p>&yen;10</p>
+						    <p>&yen;100</p>
+						</li>
+						<li>
+							<a href=""><img src="images/p1.jpg" alt=""></a>
+							<p>&yen;10</p>
+						    <p>&yen;100</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section id="jd_supermarket">
+				<div id="jd_title">京东超市</div>
+				<div class="clear_f"> 
+					<a href="" class="w_50 f_left b_right
+					"><img src="images/pf1.jpg" alt=""></a>
+					<a href="" class="w_50 f_right b_bottom"><img src="images/pf2.jpg" alt=""></a>
+					<a href="" class="w_50 f_right"><img src="images/pf3.jpg" alt=""></a>
+				</div>
+			</section>
+			<section id="jd_supermarket">
+				<div id="jd_title">京东超市</div>
+				<div class="clear_f"> 
+					<a href="" class="w_50 f_right b_left
+					"><img src="images/pf1.jpg" alt=""></a>
+					<a href="" class="w_50 f_left b_bottom"><img src="images/pf2.jpg" alt=""></a>
+					<a href="" class="w_50 f_left"><img src="images/pf3.jpg" alt=""></a>
+				</div>
+			</section>
+			<section id="jd_supermarket">
+				<div id="jd_title">京东超市</div>
+				<div class="clear_f"> 
+					<a href="" class="w_50 f_left b_right
+					"><img src="images/pf1.jpg" alt=""></a>
+					<a href="" class="w_50 f_right b_bottom"><img src="images/pf2.jpg" alt=""></a>
+					<a href="" class="w_50 f_right"><img src="images/pf3.jpg" alt=""></a>
+				</div>
+			</section>
+		</main>
+
+	</div>
+	   <script src="swiper.min.js"></script>
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        preloadImages: false,
+        lazyLoading: true,
+        slidesPerView:1,
+        loop:true,
+        autoplay:1200
+    });
+
+		var input=document.querySelector("input");
+	var timer;
+	fun();
+	function fun(){
+	    if(!timer){
+			timer=setInterval(fun1,1000);
+		}else{
+			   clearInterval(timer);
+			timer=null;
+		}
+	}
+	var  set=new Date(2017,06,7,21,00,00);
+	var setdate=set.getTime();
+	function fun1(){
+		var  date=new Date();
+		
+		var nowdate=date.getTime();
+		
+		var time=setdate-nowdate;
+		console.log(time);
+		if(time>0){
+			var h=parseInt(time/1000/3600);
+		    var m = parseInt(time/1000/60-h*60);
+			var s = parseInt(time/1000-m*60 -h*3600);
+			$("#clock_time :nth-child(1)").text(parseInt(h/10));
+			$("#clock_time :nth-child(2)").text(parseInt(h%10));
+			$("#clock_time :nth-child(4)").text(parseInt(m/10));
+			$("#clock_time :nth-child(5)").text(parseInt(m%10));
+			$("#clock_time :nth-child(7)").text(parseInt(s/10));
+			$("#clock_time :nth-child(8)").text(parseInt(s%10)); 
+      }else{
+   	   setInterval(timer);
+   	   timer = null;
+     } 
+   }
+	</script>
+</body>
+</html>
